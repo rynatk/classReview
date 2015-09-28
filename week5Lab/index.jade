@@ -1,0 +1,122 @@
+doctype html
+html.no-js
+  head
+    meta(charset='utf-8')
+    title Iron News
+    meta(name='description' content='')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='apple-touch-icon' href='apple-touch-icon.png')
+    // Place favicon.ico and apple-touch-icon.png in the root directory
+    // build:css styles/vendor.css
+    // bower:css
+    // endbower
+    // endbuild
+    // build:css styles/main.css
+    link(rel='stylesheet' href='styles/main.css')
+    // endbuild
+    // build:js scripts/vendor/modernizr.js
+    script(src='../bower_components/modernizr/modernizr.js')
+    // endbuild
+  body
+  
+  .container
+    .header
+      ul.nav.nav-pills
+        li
+          h3.text-muted Iron News
+        li
+          a(href='#') new
+        li
+          a(href='#') comments
+        li
+          a(href='#') show
+        li
+          a(href='#') ask
+        li
+          a(href='#') jobs
+        li
+          a(href='#') submit
+        
+      
+    
+    .jumbotron
+      
+    
+    .footer
+      ul.nav
+        li
+          a(href='#') FAQ
+        li |
+        li
+          a(href='#') Support
+        li |
+            
+        li
+          a(href='#') API
+        li |
+            
+        li
+          a(href='#') Security
+        li |
+        
+        li
+          a(href='#') List
+        li |
+            
+        li
+          a(href='#') Bookmarklet
+        li |
+            
+        li
+          a(href='#') DMCA
+        li |
+            
+        li
+          a(href='#') Contact
+          
+    script(type="text/template" id="lineTemplate")
+      .articleHead 
+        .title {{ title }}
+      .articleDetails
+        .timeCreated {{ created_at }}
+        .numberVotes {{ comments_count }}
+        .submitter {{ submitter }}
+        
+    script(type="text/template" id="commentsTemplate")
+      li.comments
+        .name {{ name }} 
+        .message {{ message }}
+        .created_at {{ created_at }}
+        
+    
+    // build:js scripts/vendor.js
+    // bower:js
+    script(src='../bower_components/jquery/dist/jquery.js')
+    script(src='../bower_components/underscore/underscore.js')
+    script(src='../bower_components/backbone/backbone.js')
+    
+    // endbower
+    // endbuild
+    // build:js scripts/plugins.js
+    script(src='../bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js')
+    script(src='../bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js')
+    script(src='../bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js')
+    script(src='../bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js')
+    script(src='../bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js')
+    script(src='../bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js')
+    script(src='../bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js')
+    script(src='../bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js')
+    script(src='../bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js')
+    script(src='../bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js')
+    script(src='../bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js')
+    script(src='../bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js')
+    // endbuild
+    // build:js scripts/main.js
+    script(src='scripts/router.js')
+    script(src='scripts/models.js')
+    script(src='scripts/views.js')
+    script(src='scripts/main.js')
+    
+    
+    
+    // endbuild
