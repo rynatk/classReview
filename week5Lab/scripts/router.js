@@ -1,6 +1,6 @@
 var Router = Backbone.Router.extend({
   routes: {
-    ':asdjhg/comments': 'showComments',
+    ':asdf/comments': 'showComments',
     '': 'showPage'
   },
 
@@ -11,7 +11,7 @@ var Router = Backbone.Router.extend({
     });
   },
 
-  showComments: function (articleId) {  //passes asdjhg as articleId
+  showComments: function (articleId) {
     var article = new Article({id: articleId});
     article.fetch().then(function () {
       var view = new CommentsView({model: article});
